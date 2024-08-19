@@ -1,0 +1,92 @@
+@use 'variables' as v;
+
+.padding_card{
+    padding:15px;
+    border-radius: 5px;
+    min-height: 200px;
+    text-align: center;
+}
+.padding_card_graph_1 {
+    height: 224px;
+}
+.padding_card_graph {
+    width: 180px;
+    // height: 180px;
+    height: auto;
+    margin: auto;
+    // min-height: 180px;
+    text-align: center;
+}
+.bg_colora{
+    background-color: v.$morado_m2;
+    color:#fff;
+}
+.bg_colorb{
+    background-color: v.$danger;
+    color: #fff;
+}
+.bg_colorc{
+    background-color: v.$warning;
+    color: #fff;
+}
+.bg_colord{
+    background-color: v.$success;
+    color:#fff;
+}
+.card-graph{
+    width: 200px;
+    min-height: 200px;
+    box-shadow: none;
+}
+.bshadow{
+    box-shadow: 10px 10px 20px -5px rgb(0, 0, 0 );
+}
+.card-desc{
+    width: 200px;
+    box-shadow: none;
+}
+.counter{
+    font-size: 7rem;
+    line-height: 1.2 !important;
+}
+.subtitulo-inicio {
+    font-size: 2.5rem;
+}
+.color1{
+    color: black;
+    font-weight: 700;
+    text-align: center;
+}
+.color2{
+    color: black;
+    font-weight: 700;
+    text-align: center;
+}
+.color3{
+    color: black;
+    font-weight: 700;
+    text-align: center;
+}
+
+.boton-inicial {
+    transition: all .4s ease-in-out;
+}
+
+.boton-inicial:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.titulo-tooltip-prioridad {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.texto-tooltip-prioridad {
+    font-size: 10px;
+}
+
+.boton_inicio {
+    cursor: pointer;
+}

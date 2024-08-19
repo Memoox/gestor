@@ -1,0 +1,57 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.estatus {
+    @include m.grid(1, 1rem);
+    @include m.tablet {
+        @include m.grid(4, 1rem);
+    }
+    margin:  2rem 0;
+    & .estatus-btn {
+        color: #fff;
+        padding-top: 1rem; 
+        height: 17rem;
+        max-width: 100%;
+        margin: 1rem;
+        text-align: center;
+        cursor: pointer;
+        & .total {
+            font-size: 7rem;
+            font-weight: 700;
+        }
+        & .desc {
+            display: block;               
+            border-top: .1rem dashed v.$blanco;
+            border-bottom: .1rem dashed v.$blanco;
+            font-weight: 500;
+            font-size: 2.5rem;
+            padding: .5rem 0 .5rem 0;
+        }
+    }
+    & .btn-total {
+        background: v.$morado_m2;        
+        box-shadow: 0 1.5rem 0 0 v.$morado_m1;       
+    }
+    & .btn-extra {
+        background: v.$danger;        
+        box-shadow: 0 1.5rem 0 0 v.$dangerB;   
+    }
+    & .btn-urgente {
+        background: v.$warning;        
+        box-shadow: 0 1.5rem 0 0 v.$warningB; 
+    }
+    & .btn-normal {
+        background: v.$success;        
+        box-shadow: 0 1.5rem 0 0 v.$successB;      
+    }
+}
+.estatus-por {
+    color: v.$gris_g1;
+    // height: 25rem;
+    height: auto;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+    font-weight: 700;
+    box-shadow: 1rem 1rem 2rem -.5rem rgb(0 0 0 / 41%);
+}

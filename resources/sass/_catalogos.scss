@@ -1,0 +1,79 @@
+@use 'variables' as v;
+
+.titulo-catalogos {
+    color: black;
+}
+
+.pagination__rows-per-page {
+    color: white;
+}
+
+.buscador-data-table {
+    color: black;
+}
+
+.buscador-data-table input {
+    border: 1px solid black;
+    padding: 3px;
+    padding-left: 5px;
+}
+
+.texto-grafica-1 {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.barra-1 {
+    height: 20px;
+    width: auto;
+    border: 1px solid #eaeaed;
+}
+
+.barra-1:hover {
+    cursor: pointer;
+}
+
+.barra-porcent {
+    height: 18px;
+}
+
+.barra-1-porcent-1 {
+    background-color: #c70039;
+}
+
+.barra-2-porcent-1 {
+    background-color: #2dac66;
+}
+
+.barra-3-porcent-1 {
+    background-color: #ffc300;
+}
+
+.barra-4-porcent-1 {
+    background-color: #626A93;
+}
+
+.link-archivo {
+    cursor: pointer;
+}
+
+.link-archivo:hover {
+    color:blue;
+}
+
+.texto-porcentaje {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.color-texto-porcentaje-1 {
+    color: v.$dangerB;
+}
+
+.color-texto-porcentaje-2 {
+    color: v.$warningB;
+}
+
+.color-texto-porcentaje-3 {
+    color: v.$successB;
+}

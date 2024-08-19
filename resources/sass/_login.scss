@@ -1,0 +1,113 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    // background-color: v.$gris_g1;
+    color: v.$blanco;
+}
+
+.conteiner-seg {
+    @include m.tablet {
+        @include m.grid(2, 0rem);
+        min-height: 100vh;
+    }
+    .imagen {
+        background-image: url(../../public/img/background.png);
+        background-size: cover;
+        background-position: center center;
+        height: 10rem;   
+        @include m.tablet {
+            height: auto;
+        }
+    }
+    .app {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+        .form-login{
+            text-align: center;
+            min-width: 25rem;  
+            max-width: 40rem;   
+            & h1 {
+                font-weight: 700;
+            }
+            & p{
+                font-size: 2.1rem;
+            }   
+            & span {
+                font-weight: 700;
+            }
+            & .text-alert {
+                font-size: 1.8rem;
+                color: #ffff00;
+                
+            }
+        }
+        input {
+            padding:.8rem;
+            display:block;
+            width: 100%;
+            background-color: v.$blanco;
+            border: 1px solid v.$gris_g3;
+            border-radius: .4rem;
+            margin-bottom: 1.2rem;
+            outline: none;
+            text-align: center;
+        }
+        ::placeholder {
+            color: v.$gris_g3;
+        }
+    }
+}
+/*texbox 
+---------------------------------------------------*/
+.inner-addon {
+    position: relative;
+}
+.inner-addon .fa {
+    position: absolute;
+    padding: 10px;
+    pointer-events: none;
+    color: v.$gris_g1;  
+}
+.left-addon .fa  { 
+    left:  0px; 
+}
+.left-addon input  { 
+    padding-left:  30px; 
+}
+
+.btn {
+    background-color: v.$verde_v2;
+    margin-top: 2rem;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 5rem;
+    color: v.$gris_g1;
+    text-transform: uppercase;
+    border: none;
+    font-size: 1.7rem;
+    font-weight:500;
+    margin: 0 auto;
+    @include m.telefono {
+        width: auto;
+    }
+    &:hover {
+        cursor: pointer;
+        color: v.$morado_m1;
+    }
+}
+
+.titulo-bienvenido {
+    color: white;
+}

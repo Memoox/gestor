@@ -1,0 +1,129 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.page-header{
+    background-color: v.$gris_g3;
+    display:  grid;
+    grid-template-columns: repeat(1, 1fr);
+    z-index: 1;
+
+    box-shadow: 0px 2px 9px -1px rgba(0,0,0,0.79);
+    -webkit-box-shadow: 0px 2px 9px -1px rgba(0,0,0,0.79);
+    -moz-box-shadow: 0px 2px 9px -1px rgba(0,0,0,0.79);
+
+    @include m.telefono {
+        grid-template-columns: 30rem 2.2rem 1.5rem auto;
+    }
+       
+    & .logo {
+        background-color: v.$blanco;
+    }
+    & .separador-m {
+        background-color: v.$morado_m1;
+    }
+    & .separador-v {
+        background-color: v.$verde_v1;
+        text-align: right;
+        padding-right: 2rem;
+        .m-1 {
+            width: 4rem;
+            color: v.$blanco;
+            padding: 1rem;            
+            cursor: pointer; 
+        }
+        @include m.telefono {
+            .m-1 {
+                visibility: hidden;
+            }
+        }
+    }
+    & .separador-menu {
+        background-color: v.$morado_m1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;        
+        display: none;
+        .info-menu {
+            display: flex;
+            flex-direction: row;
+            justify-content:flex-end;
+            align-items: center;
+            height: 100%;
+            .m-2 {
+                visibility: visible;
+                @include m.tablet {                    
+                    visibility: hidden;
+                }                
+            }
+
+            & .navegacion {
+                visibility: hidden;
+                opacity: 0;
+                height: 0;
+                transition: visibility .3s ease-in-out, opacity .5s linear, height .5s linear; 
+            
+                @include m.tablet {
+                    display: flex;
+                    align-items: center;
+                    opacity: 1;
+                    visibility: visible;
+                }
+                
+                a {
+                    // color: v.$blanco;
+                    color: v.$negro;
+                    text-decoration: none;
+                    font-size: 2.2rem;
+                    display: block;
+                    text-align: center;
+                    cursor: pointer; // new
+            
+                    @include m.tablet {
+                        margin-right: 2rem;
+                        // font-size: 1.8rem;
+                        font-size: 1.6rem;
+            
+                        &:last-of-type {
+                            margin-right: 0;
+                        }
+                    }
+            
+                    & :hover {
+                        // color: v.$verde_v1;
+                    }
+                }
+                a:hover {
+                    // color: v.$verde_v1;                   
+                }
+                .activo {
+                    color: v.$verde_v1;
+                    font-weight: bold;
+                }
+            }
+            & .img-usuario {
+                display: flex;
+                justify-content:center;
+                width: 100%;
+               & img {
+                width: 5rem;
+               }
+                
+            }
+            & .datos-usuario {
+                height: 100%;
+                max-width: 13rem;
+                font-size: 1.2rem;
+                padding: .5rem;
+                text-align: center;
+            }
+        }
+
+        @include m.telefono {
+            display: block;
+        }
+    }
+}
+
+.texto-green-2 {
+    color: #A3BC39!important;
+}
