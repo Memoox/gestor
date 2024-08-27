@@ -17,7 +17,7 @@
                         <tr>
                             <th class="borders-header ocultar-titulo"></th>
                             <!-- <th class="borders-header titulo-columna borde-izquierdo">#</th> -->
-                            <th class="borders-header titulo-columna borde-izquierdo">Folio</th>
+                            <th class="borders-header titulo-columna borde-izquierdo">Folio </th>
                             <th class="borders-header hidden-column titulo-columna">Documento</th>
                             <th class="borders-header titulo-columna">Asunto</th>
                             <th class="borders-header hidden-column titulo-columna">Dependencia</th>
